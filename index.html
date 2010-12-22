@@ -43,7 +43,6 @@
 			{/block:TagPage}		
 		
 	        <ul id="posts">
-	        
 	            {block:Posts}
 	                {block:Text}
 	                    <li class="post text {block:PermalinkPage}post-perm{/block:PermalinkPage}">
@@ -237,14 +236,13 @@
 	                    </li>
 	                {/block:Audio}
 	                                
-	            {/block:Posts}
-	                        
+	            {/block:Posts}            
 	        </ul>
+	        
 		</div>
 		<img class="loader-indicator" src="http://laander.net/tumblr-resources/images/ajax-loader.gif" alt="Gimme a sec can you..">		
 		
 		{block:Likes}
-		
 			<h3 class="subtitle">
 				Recent &hearts;'s
 			</h3>		
@@ -252,8 +250,7 @@
 			<div class="masonry-grid">
 				{Likes limit="10"}
 			</div>
-			<img class="loader-indicator" src="http://laander.net/tumblr-resources/images/ajax-loader.gif" alt="Gimme a sec can you..">				
-	
+			<img class="loader-indicator" src="http://laander.net/tumblr-resources/images/ajax-loader.gif" alt="Gimme a sec can you..">	
 		{/block:Likes}
 
         <p id="footer">

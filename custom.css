@@ -267,7 +267,7 @@ h1 { display: none; }
 	.like_post {
 		display: none;
 		width: 270px;
-		margin: 10px 20px;
+		margin: 0 20px;
 		list-style: none;
 		overflow: hidden; }
 	
@@ -275,6 +275,7 @@ h1 { display: none; }
 			display: block;
 			width: auto;
 			padding: 10px;
+			margin: 10px 0;			
 			background-color: #fff;
 			border: 1px solid #d5d1c7;
 			-webkit-border-radius: 1px;
