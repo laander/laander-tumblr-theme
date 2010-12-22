@@ -76,70 +76,62 @@ h1 { display: none; }
 		position: relative;
 		height: auto;
 		margin: 0;
-		padding: 15px;					
+		padding: 15px 15px 15px 20px;					
 		color: #F4F2E9;
 		font-size: 13px;
 		font-weight: normal;
 		line-height: 0;
 		white-space: nowrap;
 		overflow: hidden; }
-		
-		#description a.index {
-			display: inline;
-			width: 11px;
-			margin: 0 10px 0 0;	
-			border-bottom: 0; }					
-		
+				
 		#description .description-first {
 			display: block;
-			height: 13px;
-			margin: 0 0 10px 0; }
+			height: 10px;
+			margin: 10px 0 10px 0; }
 			
 		#description .description-second {
 			display: block;
-			height: 9px; /* 13px - 4px */
-			margin: 10px 0 10px 21px; }
-		
-		#description a.button {
-			/* padding: 4px 6px;
-			background-color: #33312d;
-			-webkit-border-radius: 1px;
-			-moz-border-radius: 1px;
-			border-radius: 1px; */
-			color: #F4F2E9; }
-
-		#description a:hover {
-			color: #F4F2E9; }
+			height: 10px; /* 13px - 4px */
+			margin: 10px 0 10px -5px; }
 			
-		#description a.button img {
-			margin: 0 5px -3px 5px; }	
+			#description a.button {
+				/* padding: 4px 6px;
+				background-color: #33312d;
+				-webkit-border-radius: 1px;
+				-moz-border-radius: 1px;
+				border-radius: 1px; */
+				color: #F4F2E9; }
+				
+			#description a.textlink {
+				border-bottom: 1px #F4F2E9 dotted; }
+	
+			#description a:hover {
+				color: #F4F2E9; }
+				
+			#description a.button img {
+				margin: 0 5px -3px 5px; }	
 
-#footer	{
-	padding: 20px 10px 20px 20px;
-	text-align: left; }
+/* Subtitle */
+.subtitle {
+	margin: 0;
+	padding: 10px 0 10px 20px;
+	text-align: left;
+	font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: #C45726; }
 	
-	#footer, #footer a {
-		font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
-		font-size: 13px;					
-		color: #C45726; }
-	
-	#footer {
-		color: #bebdb8; }					
-	
-	#footer a {
-		color: #C45726; }					
-	
-	#footer a:hover { 
-		color: #DE7327; }
+.loader-indicator {
+	padding: 10px 20px;
+	margin: 0; }
 
 /* Posts index */					
-ol#posts {
+.masonry-grid #posts {
 	width: auto; /* 870px */
 	padding: 0;
-	margin: 94px 0 0 0;
+	margin: 100px 0 0 0;
 	text-align: center; }
-	
-	/* Post */
+		
+	/* Posts */
 	.post {
 		display: none;
 		width: 270px;
@@ -171,12 +163,12 @@ ol#posts {
 			text-align: left;
 			line-height: 1.5; }
     		
-    	.text h3 {
-			font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
-			font-size: 20px; }
-		
-		div.text p {
-			padding: 10px 0; }
+	    	.text h3 {
+				font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
+				font-size: 20px; }
+			
+			div.text p {
+				padding: 10px 0; }
 		
 		/* Photos */								
 		.photo-wrap {
@@ -192,7 +184,7 @@ ol#posts {
 			box-shadow: 0 3px 3px #d4d4d4; }
 			
 			.post .photo img {
-				max-width: 270px; }
+				max-width: 250px; }
 			
 		.post-perm .photo-wrap {
 			padding: 20px; }
@@ -219,16 +211,15 @@ ol#posts {
 			-moz-box-shadow: 0 3px 3px #d4d4d4;
 			box-shadow: 0 3px 3px #d4d4d4; }
 			
-		.post .video {
-			max-width: 270px;
-			overflow: hidden;
-		}						
-			
-		.post-perm .video-wrap {
-			padding: 20px; }
-			
-		.video .caption {
-			padding: 15px 0 10px 0; }
+			.post .video {
+				max-width: 250px;
+				overflow: hidden; }						
+				
+			.post-perm .video-wrap {
+				padding: 20px; }
+				
+			.video .caption {
+				padding: 15px 0 10px 0; }
 			
 		/* Quote */
 		p.quote {
@@ -252,17 +243,80 @@ ol#posts {
 			margin: 0; 
 			padding: 0; }
 		
-		ul.chat li {
+			ul.chat li {
+				padding: 10px;
+				margin: 5px 0;					
+				text-align: left;
+				background-color: #e0dfd7;
+				list-style: none; }
+	
+			ul.chat li.even {
+				background-color: #edece6; }
+		
+/* Likes index */
+.masonry-grid #likes {
+	margin: 0;
+	padding: 0;
+	text-align: left; }
+		
+	/* Like posts */	
+	.like_post {
+		display: none;
+		width: 270px;
+		margin: 10px 20px;
+		list-style: none;
+		overflow: hidden; }
+	
+		.like_post a {
+			display: block;
+			width: auto;
 			padding: 10px;
-			margin: 5px 0;					
-			text-align: left;
-			background-color: #e0dfd7;
-			list-style: none; }
+			background-color: #fff;
+			border: 1px solid #d5d1c7;
+			-webkit-border-radius: 1px;
+			-moz-border-radius: 1px;
+			border-radius: 1px;
+			-webkit-box-shadow: 0 3px 5px #d4d4d4;
+			-moz-box-shadow: 0 3px 3px #d4d4d4;
+			box-shadow: 0 3px 3px #d4d4d4; }
+			
+			.like_post a img {
+				max-width: 250px;
+				overflow: hidden; }		
+		
+		.like_below_photo,
+		.like_caption {
+			display: none; }		
+		
+	.like_quote_post,
+	.like_link_post,
+	.like_chat_post,
+	.like_audio_post,
+	.like_text_post	{
+		display: none;
+		height: 0;
+		width: 0;
+		margin: 0;
+		padding: 0; }
 
-		ul.chat li.even {
-			background-color: #edece6; }
+/* Footer */
+#footer	{
+	margin: 0;
+	padding: 10px 0 20px 20px;
+	text-align: left;
+	color: #bebdb8; }
+	
+	#footer, #footer a {
+		font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
+		font-size: 13px; }
+		
+	#footer a {
+		color: #C45726; }					
+	
+	#footer a:hover { 
+		color: #DE7327; }
 
 /* Tumblr buttons */
 #tumblr_controls {
 	padding-top: 89px;
-	z-index: 400; }        
+	z-index: 400; }

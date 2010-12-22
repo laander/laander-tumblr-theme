@@ -32,236 +32,253 @@
             </div>	
         {/block:Description}
 
-        <ol id="posts">
-            {block:Posts}
-                {block:Text}
-                    <li class="post text {block:PermalinkPage}post-perm{/block:PermalinkPage}">
-                        {block:Title}
-                            <h3><a href="{Permalink}">{Title}</a></h3>
-                        {/block:Title}
-
-                        <div class="text">{Body}</div>
-                        
-                    	<a href="{Permalink}" class="meta"><p>
-                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
-                    	</p></a>
-                    	<div class="notes">
-                    		{PostNotes}
-                    	</div>
-                        
-                    </li>
-                {/block:Text}
-
-                {block:Photo}
-                    <li class="post photo {block:PermalinkPage}post-perm{/block:PermalinkPage}">
-                        
-                        <div class="photo-wrap">
+		<div class="masonry-grid">
+	        <ul id="posts">
+	            {block:Posts}
+	                {block:Text}
+	                    <li class="post text {block:PermalinkPage}post-perm{/block:PermalinkPage}">
+	                        {block:Title}
+	                            <h3><a href="{Permalink}">{Title}</a></h3>
+	                        {/block:Title}
 	
-	                        {block:IndexPage}
-		                        <a href="{Permalink}" alt="{PhotoAlt}">                        	
-			                        <img src="{PhotoURL-250}" alt="{PhotoAlt}"/>
-		                        </a>
-	                        {/block:IndexPage}
-
-							{block:PermalinkPage}
-	                        	<a href="{LinkURL}" alt="{PhotoAlt}">
-	                        		<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-	                        	</a>
-	                        {/block:PermalinkPage}
-
-	                        {block:Caption}
-	                            <div class="caption">{Caption}</div>
-	                        {/block:Caption}                                                
-    
-                        </div>
-                        
-                    	<a href="{Permalink}" class="meta"><p>
-                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
-                    	</p></a>
-                    	<div class="notes">
-                    		{PostNotes}
-                    	</div>
-                    	                    
-                    </li>
-                {/block:Photo}
-                
-                {block:Photoset}
-                    <li class="post photoset {block:PermalinkPage}post-perm{/block:PermalinkPage}">
-
-                        <div class="photo-wrap">
-
-	                        {block:IndexPage}
-		                        {Photoset-250}
-	                        {/block:IndexPage}
-
-							{block:PermalinkPage}
-	                        	{Photoset-500}
-	                        {/block:PermalinkPage}
-
-						</div>
+	                        <div class="text">{Body}</div>
+	                        
+	                    	<a href="{Permalink}" class="meta"><p>
+	                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
+	                    	</p></a>
+	                    	<div class="notes">
+	                    		{PostNotes}
+	                    	</div>
+	                        
+	                    </li>
+	                {/block:Text}
 	
-                        {block:Caption}
-                            <div class="caption">{Caption}</div>
-                        {/block:Caption}
-                        
-                    	<a href="{Permalink}" class="meta"><p>
-                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
-                    	</p></a>
-                    	<div class="notes">
-                    		{PostNotes}
-                    	</div>                      
-                        
-                    </li>
-                {/block:Photoset}
-
-                {block:Quote}
-                    <li class="post quote {block:PermalinkPage}post-perm{/block:PermalinkPage}">
-                        <p class="quote">"{Quote}"</p>
-
-                        {block:Source}
-                            <div class="source">{Source}</div>
-                        {/block:Source}
-                        
-                    	<a href="{Permalink}" class="meta"><p>
-                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
-                    	</p></a>
-                    	<div class="notes">
-                    		{PostNotes}
-                    	</div>
-                        
-                    </li>
-                {/block:Quote}
-
-                {block:Link}
-                    <li class="post link {block:PermalinkPage}post-perm{/block:PermalinkPage}">
-                        <a href="{URL}" class="link" {Target}>{Name}</a>
-
-                        {block:Description}
-                            <div class="description">{Description}</div>
-                        {/block:Description}
-                        
-                    	<a href="{Permalink}" class="meta"><p>
-                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
-                    	</p></a>
-                    	<div class="notes">
-                    		{PostNotes}
-                    	</div>                    
-                        
-                    </li>
-                {/block:Link}
-
-                {block:Chat}
-                    <li class="post chat {block:PermalinkPage}post-perm{/block:PermalinkPage}">
-                        {block:Title}
-                            <h3><a href="{Permalink}">{Title}</a></h3>
-                        {/block:Title}
-
-                        <ul class="chat">
-                            {block:Lines}
-                                <li class="{Alt} user_{UserNumber}">
-                                    {block:Label}
-                                        <span class="label">{Label}</span>
-                                    {/block:Label}
-
-                                    {Line}
-                                </li>
-                            {/block:Lines}
-                        </ul>
-                        
-                    	<a href="{Permalink}" class="meta"><p>
-                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
-                    	</p></a>
-                    	<div class="notes">
-                    		{PostNotes}
-                    	</div>       
-                        
-                    </li>
-                {/block:Chat}
-
-                {block:Video}
-                    <li class="post video {block:PermalinkPage}post-perm{/block:PermalinkPage}">
-
-                        <div class="video-wrap">
-
-	                        {block:IndexPage}
-		                        {Video-250}
-	                        {/block:IndexPage}
-
-							{block:PermalinkPage}
-	                        	{Video-500}
-	                        {/block:PermalinkPage}
-
+	                {block:Photo}
+	                    <li class="post photo {block:PermalinkPage}post-perm{/block:PermalinkPage}">
+	                        
+	                        <div class="photo-wrap">
+		
+		                        {block:IndexPage}
+			                        <a href="{Permalink}" alt="{PhotoAlt}">                        	
+				                        <img src="{PhotoURL-250}" alt="{PhotoAlt}"/>
+			                        </a>
+		                        {/block:IndexPage}
+	
+								{block:PermalinkPage}
+		                        	<a href="{LinkURL}" alt="{PhotoAlt}">
+		                        		<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+		                        	</a>
+		                        {/block:PermalinkPage}
+	
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}                                                
+	    
+	                        </div>
+	                        
+	                    	<a href="{Permalink}" class="meta"><p>
+	                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
+	                    	</p></a>
+	                    	<div class="notes">
+	                    		{PostNotes}
+	                    	</div>
+	                    	                    
+	                    </li>
+	                {/block:Photo}
+	                
+	                {block:Photoset}
+	                    <li class="post photoset {block:PermalinkPage}post-perm{/block:PermalinkPage}">
+	
+	                        <div class="photo-wrap">
+	
+		                        {block:IndexPage}
+			                        {Photoset-250}
+		                        {/block:IndexPage}
+	
+								{block:PermalinkPage}
+		                        	{Photoset-500}
+		                        {/block:PermalinkPage}
+	
+							</div>
+		
 	                        {block:Caption}
 	                            <div class="caption">{Caption}</div>
 	                        {/block:Caption}
+	                        
+	                    	<a href="{Permalink}" class="meta"><p>
+	                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
+	                    	</p></a>
+	                    	<div class="notes">
+	                    		{PostNotes}
+	                    	</div>                      
+	                        
+	                    </li>
+	                {/block:Photoset}
+	
+	                {block:Quote}
+	                    <li class="post quote {block:PermalinkPage}post-perm{/block:PermalinkPage}">
+	                        <p class="quote">"{Quote}"</p>
+	
+	                        {block:Source}
+	                            <div class="source">{Source}</div>
+	                        {/block:Source}
+	                        
+	                    	<a href="{Permalink}" class="meta"><p>
+	                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
+	                    	</p></a>
+	                    	<div class="notes">
+	                    		{PostNotes}
+	                    	</div>
+	                        
+	                    </li>
+	                {/block:Quote}
+	
+	                {block:Link}
+	                    <li class="post link {block:PermalinkPage}post-perm{/block:PermalinkPage}">
+	                        <a href="{URL}" class="link" {Target}>{Name}</a>
+	
+	                        {block:Description}
+	                            <div class="description">{Description}</div>
+	                        {/block:Description}
+	                        
+	                    	<a href="{Permalink}" class="meta"><p>
+	                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
+	                    	</p></a>
+	                    	<div class="notes">
+	                    		{PostNotes}
+	                    	</div>                    
+	                        
+	                    </li>
+	                {/block:Link}
+	
+	                {block:Chat}
+	                    <li class="post chat {block:PermalinkPage}post-perm{/block:PermalinkPage}">
+	                        {block:Title}
+	                            <h3><a href="{Permalink}">{Title}</a></h3>
+	                        {/block:Title}
+	
+	                        <ul class="chat">
+	                            {block:Lines}
+	                                <li class="{Alt} user_{UserNumber}">
+	                                    {block:Label}
+	                                        <span class="label">{Label}</span>
+	                                    {/block:Label}
+	
+	                                    {Line}
+	                                </li>
+	                            {/block:Lines}
+	                        </ul>
+	                        
+	                    	<a href="{Permalink}" class="meta"><p>
+	                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
+	                    	</p></a>
+	                    	<div class="notes">
+	                    		{PostNotes}
+	                    	</div>       
+	                        
+	                    </li>
+	                {/block:Chat}
+	
+	                {block:Video}
+	                    <li class="post video {block:PermalinkPage}post-perm{/block:PermalinkPage}">
+	
+	                        <div class="video-wrap">
+	
+		                        {block:IndexPage}
+			                        {Video-250}
+		                        {/block:IndexPage}
+	
+								{block:PermalinkPage}
+		                        	{Video-500}
+		                        {/block:PermalinkPage}
+	
+		                        {block:Caption}
+		                            <div class="caption">{Caption}</div>
+		                        {/block:Caption}
+	
+							</div>
+	                        
+	                    	<a href="{Permalink}" class="meta"><p>
+	                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
+	                    	</p></a>
+	                    	<div class="notes">
+	                    		{PostNotes}
+	                    	</div>                  
+	                        
+	                    </li>
+	                {/block:Video}
+	
+	                {block:Audio}
+	                    <li class="post audio {block:PermalinkPage}post-perm{/block:PermalinkPage}">
+	                        
+	                        {AudioPlayerBlack}
+	
+	                        {block:Caption}
+	                            <div class="caption">{Caption}</div>
+	                        {/block:Caption}
+	                        
+	                    	<a href="{Permalink}" class="meta"><p>
+	                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
+	                    	</p></a>
+	                    	<div class="notes">
+	                    		{PostNotes}
+	                    	</div>         
+	                        
+	                    </li>
+	                {/block:Audio}
+	                                
+	            {/block:Posts}
+	                        
+	        </ul>
+		</div>
+		<img class="loader-indicator" src="http://laander.net/tumblr-resources/images/ajax-loader.gif" alt="Gimme a sec can you..">		
+		
+		{block:Likes}
+		
+			<h3 class="subtitle">
+				Recent likes &hearts;
+			</h3>		
 
-						</div>
-                        
-                    	<a href="{Permalink}" class="meta"><p>
-                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
-                    	</p></a>
-                    	<div class="notes">
-                    		{PostNotes}
-                    	</div>                  
-                        
-                    </li>
-                {/block:Video}
-
-                {block:Audio}
-                    <li class="post audio {block:PermalinkPage}post-perm{/block:PermalinkPage}">
-                        
-                        {AudioPlayerBlack}
-
-                        {block:Caption}
-                            <div class="caption">{Caption}</div>
-                        {/block:Caption}
-                        
-                    	<a href="{Permalink}" class="meta"><p>
-                    		{block:Date}{TimeAgo}{/block:Date}{block:NoteCount}, {NoteCountWithLabel}{/block:NoteCount}
-                    	</p></a>
-                    	<div class="notes">
-                    		{PostNotes}
-                    	</div>         
-                        
-                    </li>
-                {/block:Audio}
-                                
-            {/block:Posts}
-        </ol>
+			<div class="masonry-grid">
+				{Likes limit="10"}
+			</div>
+			<img class="loader-indicator" src="http://laander.net/tumblr-resources/images/ajax-loader.gif" alt="Gimme a sec can you..">				
+	
+		{/block:Likes}
 
         <p id="footer">
             {block:PreviousPage}
-                <a href="{PreviousPage}">&#171; Previous</a> &bull;
+                <a href="{PreviousPage}" class="button">&#171; Previous</a> &bull;
             {/block:PreviousPage}
             
             {block:PermalinkPage}
-            	<a href="/">Index</a> &bull;
+            	<a href="/" class="button">Index</a> &bull;
 			{/block:PermalinkPage}
 
-            <a href="/archive">Archive</a>
+            <a href="/archive" class="button">Archive</a>
             &bull;
-            <a href="{RSS}">Feed</a>
+            <a href="{RSS}" class="button">Feed</a>
 
             {block:NextPage}
             	&bull;
-                <a href="{NextPage}">Next &#187;</a>
+                <a href="{NextPage}" class="button">Next &#187;</a>
             {/block:NextPage}
             
         </p>
 
-	<script type="text/javascript">
-	
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-5307016-1']);
-	  _gaq.push(['_trackPageview']);
-	
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	
-	</script>
+		<script type="text/javascript">
+		
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-5307016-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
 
     </body>
 </html>

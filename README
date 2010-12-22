@@ -1,4 +1,5 @@
 In use implementation can be seen @ http://laander.com
-Feel free to take inspiration in the code and steal snippets if you wish.
+Feel free to take inspiration in the code and steal snippets if you wish. Be aware of clumsy code tho - some stuff were a little stressed.
 
-Uses the jQuery Masonry plugin for nice automagic grid webbing
+- Uses the jQuery Masonry plugin for nice automagic grid webbing
+- Icons forked from WPZoom's Social Networking icon set

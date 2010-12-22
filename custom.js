@@ -3,18 +3,22 @@ $(document).ready(function(){
     $(window).load(function(){
 		
 		// Load masonry grid
-	    $('#posts').masonry({ 
+	    $('.masonry-grid > ul').masonry({ 
 	    	columnWidth: 290, 
 	    	singleMode: true,
 	    	resizeable: true,
 	    	animate: true,
 	    });
 	    
+	    // Fade out loader indicator after grid load
+	    $('.loader-indicator').fadeOut(500);		    
+	    
 	    // Fade in hidden posts after grid load
-	    $('.post').fadeIn(500);	
+	    $('.masonry-grid > ul li').fadeIn(500);	
 
     });
     
+    // Fading links when hovering
     $('#description a.button').css('opacity', 1);
     $('#description a.button').hover(function() {
     		$(this).fadeTo('fast', 0.7);
