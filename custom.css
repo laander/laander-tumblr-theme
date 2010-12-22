@@ -1,0 +1,268 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }			
+/* remember to define focus styles! */
+:focus { outline: 0; }
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+/* tables still need 'cellspacing="0"' in the markup */
+table { border-collapse: collapse; border-spacing: 0; }        	
+
+/* CSS3 Font face */
+@font-face {
+	font-family: 'PTSansRegular';
+	src: url('http://laander.net/tumblr-resources/fonts/PTS55F-webfont.eot');
+	src: local('☺'), url('http://laander.net/tumblr-resources/fonts/PTS55F-webfont.woff') format('woff'), url('http://laander.net/tumblr-resources/fonts/PTS55F-webfont.ttf') format('truetype'), url('http://laander.net/tumblr-resources/fonts/PTS55F-webfont.svg#webfontmBFaK3EM') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}        	
+
+/* General */
+html { -webkit-text-size-adjust:none; }
+
+body {
+	margin: 0;
+	background-image: url('http://static.tumblr.com/h0yn6mh/oMal9xqnu/bg-grain.jpg');
+	background-repeat: repeat;
+	background-position: top left;
+	background-color: #f3f2ec; 
+	font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
+	/* text-transform: uppercase; */
+	/* font-family: Helvetica, Arial, sans-serif; */
+	font-size: 13px;
+	color: #000;
+	line-height: 1.5; }
+	
+a {
+	text-decoration: none;
+	color: #789422; }
+a:hover {
+	color: #A3B01A; }
+	
+/* Header & footer */
+h1 { display: none; }
+
+#description-wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 200;
+	background-color: #1d1d1c;
+	text-align: left; }
+
+	h2, #description {
+		display: block;
+		position: relative;
+		height: auto;
+		margin: 0;
+		padding: 15px;					
+		color: #F4F2E9;
+		font-size: 13px;
+		font-weight: normal;
+		line-height: 0;
+		white-space: nowrap;
+		overflow: hidden; }
+		
+		#description a.index {
+			display: inline;
+			width: 11px;
+			margin: 0 10px 0 0;	
+			border-bottom: 0; }					
+		
+		#description .description-first {
+			display: block;
+			height: 13px;
+			margin: 0 0 10px 0; }
+			
+		#description .description-second {
+			display: block;
+			height: 9px; /* 13px - 4px */
+			margin: 10px 0 10px 21px; }
+		
+		#description a.button {
+			/* padding: 4px 6px;
+			background-color: #33312d;
+			-webkit-border-radius: 1px;
+			-moz-border-radius: 1px;
+			border-radius: 1px; */
+			color: #F4F2E9; }
+
+		#description a:hover {
+			color: #F4F2E9; }
+			
+		#description a.button img {
+			margin: 0 5px -3px 5px; }	
+
+#footer	{
+	padding: 20px 10px 20px 20px;
+	text-align: left; }
+	
+	#footer, #footer a {
+		font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
+		font-size: 13px;					
+		color: #C45726; }
+	
+	#footer {
+		color: #bebdb8; }					
+	
+	#footer a {
+		color: #C45726; }					
+	
+	#footer a:hover { 
+		color: #DE7327; }
+
+/* Posts index */					
+ol#posts {
+	width: auto; /* 870px */
+	padding: 0;
+	margin: 94px 0 0 0;
+	text-align: center; }
+	
+	/* Post */
+	.post {
+		display: none;
+		width: 270px;
+		margin: 0 20px;
+		list-style: none;
+		overflow: hidden; }
+	
+	.post-perm {
+		width: 850px; }
+		
+		/* General for all posts */
+		h3 { font-weight: normal; }
+
+		a.meta p {
+			margin: 10px 0;					
+    		font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
+    		font-size: 13px;					
+			color: #bebdb8;
+			/* line-height: 2; */ }
+			
+		ol.notes {
+			padding: 0;
+			text-align: left;
+			line-height: 1.5;
+			list-style: none; }
+		
+		/* Text */
+		div.text {
+			text-align: left;
+			line-height: 1.5; }
+    		
+    	.text h3 {
+			font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
+			font-size: 20px; }
+		
+		div.text p {
+			padding: 10px 0; }
+		
+		/* Photos */								
+		.photo-wrap {
+			width: auto;
+			padding: 10px;
+			background-color: #fff;
+			border: 1px solid #d5d1c7;						
+			-webkit-border-radius: 1px;
+			-moz-border-radius: 1px;
+			border-radius: 1px;
+			-webkit-box-shadow: 0 3px 5px #d4d4d4;
+			-moz-box-shadow: 0 3px 3px #d4d4d4;
+			box-shadow: 0 3px 3px #d4d4d4; }
+			
+			.post .photo img {
+				max-width: 270px; }
+			
+		.post-perm .photo-wrap {
+			padding: 20px; }
+			
+			.post-perm .photo img {
+				max-width: 810px; }
+				
+			* html .class {
+				width: 810px; }												
+		
+			.photo .caption {
+				padding: 10px 0 0 0; }
+
+		/* Videos */
+		.video-wrap {
+			width: auto;
+			padding: 10px;
+			background-color: #fff;
+			border: 1px solid #d5d1c7;
+			-webkit-border-radius: 1px;
+			-moz-border-radius: 1px;
+			border-radius: 1px;
+			-webkit-box-shadow: 0 3px 5px #d4d4d4;
+			-moz-box-shadow: 0 3px 3px #d4d4d4;
+			box-shadow: 0 3px 3px #d4d4d4; }
+			
+		.post .video {
+			max-width: 270px;
+			overflow: hidden;
+		}						
+			
+		.post-perm .video-wrap {
+			padding: 20px; }
+			
+		.video .caption {
+			padding: 15px 0 10px 0; }
+			
+		/* Quote */
+		p.quote {
+			font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
+			font-size: 20px;
+			margin: 0 0 10px 0; }
+			
+		/* Link */
+		.link a.link {
+			font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
+			font-size: 20px; }
+			
+		.link .description {
+			text-align: left; }
+			
+		.link blockquote {
+			margin: 10px 0; }
+			
+		/* Chat */
+		ul.chat {
+			margin: 0; 
+			padding: 0; }
+		
+		ul.chat li {
+			padding: 10px;
+			margin: 5px 0;					
+			text-align: left;
+			background-color: #e0dfd7;
+			list-style: none; }
+
+		ul.chat li.even {
+			background-color: #edece6; }
+
+/* Tumblr buttons */
+#tumblr_controls {
+	padding-top: 89px;
+	z-index: 400; }        
