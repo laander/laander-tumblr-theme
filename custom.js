@@ -11,7 +11,7 @@ $(document).ready(function(){
 	    });
 	    
 	    // Fade out loader indicator after grid load
-	    $('.loader-indicator').fadeOut(500);		    
+	    $('.loader-indicator').hide();		    
 	    
 	    // Fade in hidden posts after grid load
 	    $('.masonry-grid > ul li').fadeIn(500);	
@@ -19,7 +19,6 @@ $(document).ready(function(){
     });
     
     // Fading links when hovering
-    $('#description a.button').css('opacity', 1);
     $('#description a.button').hover(function() {
     		$(this).fadeTo('fast', 0.7);
     	}, function() {

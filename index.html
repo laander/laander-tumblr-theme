@@ -31,9 +31,19 @@
 	           	</h2>
             </div>	
         {/block:Description}
+        
+        <div id="pusher"></div>
 
 		<div class="masonry-grid">
+		
+			{block:TagPage}
+				<h3 class="subtitle">
+					Filed under "{Tag}"
+				</h3>						
+			{/block:TagPage}		
+		
 	        <ul id="posts">
+	        
 	            {block:Posts}
 	                {block:Text}
 	                    <li class="post text {block:PermalinkPage}post-perm{/block:PermalinkPage}">
@@ -236,7 +246,7 @@
 		{block:Likes}
 		
 			<h3 class="subtitle">
-				Recent likes &hearts;
+				Recent &hearts;'s
 			</h3>		
 
 			<div class="masonry-grid">
@@ -258,6 +268,8 @@
             <a href="/archive" class="button">Archive</a>
             &bull;
             <a href="{RSS}" class="button">Feed</a>
+            &bull;
+            <a href="/tagged/code" class="button">Code</a>
 
             {block:NextPage}
             	&bull;
