@@ -1,5 +1,6 @@
 $(document).ready(function(){
         
+    // Wait until image and video resources are fully loaded
     $(window).load(function(){
 		
 		// Load masonry grid

@@ -193,7 +193,7 @@ h1 { display: none; }
 		.post-perm .photo-wrap {
 			padding: 20px; }
 			
-			.post-perm .photo img {
+			.post-perm .photo-wrap img {
 				max-width: 810px; }
 				
 			* html .class {
