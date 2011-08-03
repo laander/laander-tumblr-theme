@@ -61,7 +61,7 @@ a:hover {
 	
 /* Header & footer */
 h1 { display: none; }
-
+ 
 #description-wrap {
 	position: fixed;
 	top: 0;
@@ -71,12 +71,12 @@ h1 { display: none; }
 	background-color: #1d1d1c;
 	text-align: left; }
 
-	h2, #description {
+	h2#description {
 		display: block;
 		position: relative;
 		height: auto;
 		margin: 0;
-		padding: 15px 15px 15px 20px;					
+		padding: 20px;
 		color: #F4F2E9;
 		font-size: 13px;
 		font-weight: normal;
@@ -86,13 +86,15 @@ h1 { display: none; }
 				
 		#description .description-first {
 			display: block;
-			height: 10px;
-			margin: 10px 0 10px 0; }
+			height: 20px;
+			margin: 0 0 10px 0;
+			line-height: 1; }
 			
 		#description .description-second {
 			display: block;
-			height: 10px; /* 13px - 4px */
-			margin: 10px 0 10px -5px; }
+			height: 20px;
+			margin: 0 0 0 -5px;
+			line-height: 1; }
 			
 			#description a.button {
 				/* padding: 4px 6px;
@@ -113,7 +115,7 @@ h1 { display: none; }
 
 #pusher {
 	display: block;
-	height: 100px; }
+	height: 110px; }
 
 /* Subtitle */
 .subtitle {
@@ -139,13 +141,13 @@ h1 { display: none; }
 	.post {
 		display: none;
 		width: 270px;
-		margin: 0 20px;
+		margin: 10px 20px;
 		list-style: none;
-		overflow: hidden; }
+		overflow: hidden; }	
 	
 	.post-perm {
 		width: 850px; }
-		
+				
 		/* General for all posts */
 		h3 { font-weight: normal; }
 
@@ -163,16 +165,29 @@ h1 { display: none; }
 			list-style: none; }
 		
 		/* Text */
-		div.text {
+		.text {
 			text-align: left;
 			line-height: 1.5; }
     		
-	    	.text h3 {
+	    .text h3 {
 				font-family: 'PTSansRegular', Helvetica, Arial, sans-serif;
 				font-size: 20px; }
+				
+			div.text {
+				max-height: 800px;
+				overflow: hidden; }
 			
-			div.text p {
-				padding: 10px 0; }
+				div.text p {
+					padding: 10px 0; }
+				
+				div.text img {
+					max-width: 270px; }
+					
+				.post-perm div.text {
+					max-height: none !important; }
+
+				.post-perm div.text img {
+					max-width: none !important; }					
 		
 		/* Photos */								
 		.photo-wrap {
@@ -323,5 +338,5 @@ h1 { display: none; }
 
 /* Tumblr buttons */
 #tumblr_controls {
-	padding-top: 89px;
+	padding-top: 14px;
 	z-index: 400; }
